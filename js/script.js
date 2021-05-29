@@ -6,7 +6,9 @@ console.log(num);
 
 let digits = num.toString().split('');
 
-let sum = digits[0] * digits[1] * digits[2] * digits[3] * digits[4] * digits[5];
+let sum = digits.reduce(function(a, b){
+  return a * b;
+});
 console.log(sum);
 
 let sumDegree = sum ** 3;
