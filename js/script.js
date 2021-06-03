@@ -1,22 +1,20 @@
 "use strict";
 
 // № 1
-let arr = [223, 324, 42, 987, 245, 40, 390];
+let arr = ["223", "324", "42", "987", "245", "40", "390"];
 
-var arrLength = arr.length;
-for (var i = 0; i < arrLength; i++) {
-  let num = arr[i] + "";
-
-  if (num[0] === "2" || num[0] === "4") {
-    console.log(arr[i]);
+arr.forEach((item) => {
+  if (item.startsWith("2") || item.startsWith("4")) {
+    console.log(item);
   }
-}
+});
 
 // № 2
 
 console.log("----Простые числа");
 
-let number = 100;
+let number = 100,
+    simpleArr = [];
 nextPrime: for (let i = 2; i <= number; i++) {
 
   for (let j = 2; j < i; j++) {
@@ -24,5 +22,7 @@ nextPrime: for (let i = 2; i <= number; i++) {
       continue nextPrime;
     }
   }
-  console.log(i); // простое число
+  simpleArr.push(i); // простое число
 }
+
+console.log(simpleArr);
