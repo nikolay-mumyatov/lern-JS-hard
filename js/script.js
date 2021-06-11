@@ -323,12 +323,12 @@ document.addEventListener("input", (event) => {
   }
 });
 
-// Проверка input на ввод цыфр
+// Проверка input на ввод цифр
 document.addEventListener("input", (event) => {
   const target = event.target;
   if (target.matches('input[placeholder="Сумма"]')) {
     if (!isNumber(target.value)) {
-      alert("В наименовании могут быть только цыфры!");
+      alert("В наименовании могут быть только цифры!");
       target.value = "";
     }
   }
