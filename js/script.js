@@ -101,6 +101,8 @@ let appData = {
     this.deposit = false;
     this.percentDeposit = 0;
     this.moneyDeposit = 0;
+    elemRange.value = 0;
+    periodAmount.innerHTML = 1;
 
     // Сброс полей Дополнительных доход
     const resetBlockIncome = function () {
@@ -309,6 +311,36 @@ cancel.addEventListener("click", function () {
   cancel.style.display = "none";
   calcButton.style.display = "block";
 });
+
+// Проверка input на ввод символов
+document.addEventListener("input", (event) => {
+  const target = event.target;
+  if (target.matches('input[placeholder="Наименование"]')) {
+    if (isNumber(target.value)) {
+      alert('В наименовании могут быть только буквы!');
+      target.value = '';
+    }
+  }
+});
+
+// Проверка input на ввод цыфр
+document.addEventListener("input", (event) => {
+  const target = event.target;
+  if (target.matches('input[placeholder="Сумма"]')) {
+    if (!isNumber(target.value)) {
+      alert("В наименовании могут быть только цыфры!");
+      target.value = "";
+    }
+  }
+});
+
+// const inputCheckWord = function () {
+//   const inputPlaceholderName = document.querySelectorAll(
+//     'input[placeholder="Наименование"]'
+//   );
+//   console.log(inputPlaceholderName);
+// };
+// inputCheckWord();
 
 // console.log("Наша программа включает в себя данные: ");
 // for (let key in appData) {
