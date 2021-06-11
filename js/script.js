@@ -334,14 +334,6 @@ document.addEventListener("input", (event) => {
   }
 });
 
-// const inputCheckWord = function () {
-//   const inputPlaceholderName = document.querySelectorAll(
-//     'input[placeholder="Наименование"]'
-//   );
-//   console.log(inputPlaceholderName);
-// };
-// inputCheckWord();
-
 // console.log("Наша программа включает в себя данные: ");
 // for (let key in appData) {
 //   console.log('Ключ: ' + key + ' -  Значение: ' + appData[key]);
